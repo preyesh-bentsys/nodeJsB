@@ -6,6 +6,8 @@ import cors from "cors";
 import db from "./config/database.js";
 // Import router
 import Router from "./routes/routes.js";
+
+const port = process.env.PORT || 8000;
  
 // Init express
 const app = express();
@@ -29,4 +31,4 @@ try {
 app.use(Router);
  
 // listen on port
-app.listen(5000, () => console.log('Server running at http://localhost:5000'));
+app.listen(port, () => console.log('Server running at http://localhost:5000'));
